@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+
+<html>
+<meta charset="utf-8">
+<head>
+	<title>JIZLOST - A Aventura Continua</title>
+</head>
+
+<body style="font-family:Verdana; font-size:20px; background-color:white;">
+	<br> <br>
+	<table style="margin:auto; position:relative; left:-100px;">
+		<tr>
+			<td style="font-size:10px">
+				<img src="fatec2.png" width="200" height="100">
+				<p>Alunos:</p>
+				<p>Ettore Ferreira Bera Fagundes de Lima - 0040441213013</p>
+				<p>Henrique Lorenzi - 0040441213014</p>
+				<p>Pedro Henrique Fernandes Sanches - 0040441213012</p>
+				<p>Orientador:</p>
+				<p>Kleber De Oliveira Andrade</p>
+				<br>
+				<p>Este jogo foi desenvolvido como parte das exigências para </p> 
+				<p>a obtenção do título de Tecnólogo em Jogos Digitais pela</p>
+				<p>Faculdade de Tecnologia de Americana (Fatec Americana).</p>
+				<p>Seus autores o disponibilizam livre de direitos</p> 
+				<p>autorais para fins não comerciais</p>
+			</td>
+			<td>
+				<canvas id="game" width="800" height="500" style="border-radius:20px;"></canvas>
+			</td>
+			<td>
+				<span style="text-align:center; font-size:12px" id="debug"></span>
+			</td>
+		</tr>
+	</table>
+	
+	<audio id="mscGame" loop preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/music.ogg" type="audio/ogg"></audio>	
+	<audio id="mscPowerup" loop preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/musicPowerup.ogg" type="audio/ogg"></audio>	
+	<audio id="mscMenu" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/musicMenu.ogg" type="audio/ogg"></audio>	
+	<audio id="mscGameOver" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/musicGameOver.ogg" type="audio/ogg"></audio>	
+	<audio id="sndPieceBulletShoot" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/pieceBulletShoot.wav" type="audio/wav"></audio>	
+	<audio id="sndPieceBulletRotate" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/pieceBulletRotate.wav" type="audio/wav"></audio>	
+	<audio id="sndPieceBulletImpact" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/pieceBulletImpact.wav" type="audio/wav"></audio>	
+	<audio id="sndLineClear" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/lineClear.wav" type="audio/wav"></audio>	
+	<audio id="sndLaser" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/laser.wav" type="audio/wav"></audio>	
+	<audio id="sndPlanetDamage" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/planetDamage.wav" type="audio/wav"></audio>	
+	<audio id="sndEnemyDeath" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/enemyDeath.wav" type="audio/wav"></audio>
+	<audio id="sndEnemyExplosion" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/enemyExplosion.wav" type="audio/wav"></audio>
+	<audio id="sndPerfect" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/perfect.wav" type="audio/wav"></audio>	
+	<audio id="sndExcellent" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/excellent.wav" type="audio/wav"></audio>	
+	<audio id="sndNice" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/nice.wav" type="audio/wav"></audio>	
+	<audio id="sndUltraPerfect" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/ultraperfect.wav" type="audio/wav"></audio>	
+	<audio id="sndAwesome" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/awesome.wav" type="audio/wav"></audio>	
+	<audio id="sndPowerup" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/powerup.wav" type="audio/wav"></audio>	
+	<audio id="sndHealthup" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/healthup.wav" type="audio/wav"></audio>	
+	<audio id="sndNoBonus" preload="auto" oncanplaythrough="loadedSound();"><source src="sounds/nobonus.wav" type="audio/wav"></audio>	
+	
+</body>
+
+<script src="main.js"></script>
+<script src="stateMenuMain.js"></script>
+<script src="stateMenuHowToPlay.js"></script>
+<script src="stateMenuGameOver.js"></script>
+<script src="stateGame.js"></script>
+<script src="stateGamePlayer.js"></script>
+<script src="stateGameBackground.js"></script>
+<script src="stateGamePlanet.js"></script>
+<script src="stateGamePieceBullet.js"></script>
+<script src="stateGamePieceBulletPreview.js"></script>
+<script src="stateGamePiecePlayfield.js"></script>
+<script src="stateGameEnemyBasic.js"></script>
+<script src="stateGameEnemyBonus.js"></script>
+<script src="stateGameEnemyPowerup.js"></script>
+<script src="stateGameEnemyTrollRotation.js"></script>
+<script src="stateGameParticlesCircle.js"></script>
+<script src="stateGameFallingBlock.js"></script>
+<script src="stateGameHUD.js"></script>
+<script src="stateGameSpecialScore.js"></script>
+
+<script>
+	init();
+</script>
+
+</html>
